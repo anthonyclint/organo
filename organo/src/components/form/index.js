@@ -1,7 +1,20 @@
 import './form.css';
 import FormField from '../form-field';
+import DropdownList from '../dropdown-list';
+import Button from '../button';
 
 const Form = () => {
+
+    const teams = [
+        'Programação',
+        'Front-End',
+        'Data Science',
+        'Devops',
+        'UX e Design',
+        'Mobile',
+        'Inovação e Gestão'
+    ];
+
     return (
         <section className='form'>
             <form>
@@ -9,7 +22,8 @@ const Form = () => {
                 <FormField label="Nome" placeholder="Digite o seu nome" />
                 <FormField label="Cargo" placeholder="Digite o seu cargo" />
                 <FormField label="Imagem" placeholder="Informe o endereço da imagem" />
-                <FormField label="Time" />
+                <DropdownList label="Time" itens={teams} />
+                <Button> Criar card </Button>
             </form>
         </section>
     );
