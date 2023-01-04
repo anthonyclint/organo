@@ -3,9 +3,20 @@ import './team.css';
 
 const Team = (props) => {
     return (
-        <section className='team' style={{ backgroundColor: props.secondColor }}>
-            <h3 style={{ borderColor: props.firstColor }}>{props.name}</h3>
-            <Collaborator />
+        (props.collaborators.length > 0) && <section className='team' style={{ backgroundColor: props.secondColor }}>
+                <h3 style={{ borderColor: props.firstColor }}>{props.name}</h3>
+
+                <div className='collaborators'>
+                    { props.collaborators
+                        .map(
+                            collaborator => <Collaborator 
+                                name={collaborator.name}
+                                job={collaborator.job}
+                                image={collaborator.image}
+                            />
+                        )
+                    }
+                </div>
         </section>
     );
 }
