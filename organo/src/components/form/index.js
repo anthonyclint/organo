@@ -7,16 +7,6 @@ import Button from '../button';
 
 const Form = (props) => {
 
-    const teams = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ];
-
     const [name, setName] = useState('');
     const [job, setJob] = useState('');
     const [image, setImage] = useState('');
@@ -58,7 +48,7 @@ const Form = (props) => {
                 />
                 <DropdownList 
                     label="Time" 
-                    itens={teams}
+                    itens={props.teams}
                     value={team}
                     changed = {changedValue => setTeam(changedValue)}
                 />
