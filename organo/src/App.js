@@ -2,7 +2,8 @@ import { useState } from 'react';
 
 import Banner from './components/banner';
 import Form from './components/form';
-import Team from './components/team'
+import Team from './components/team';
+import Footer from './components/footer';
 
 function App() {
 
@@ -71,6 +72,8 @@ function App() {
             />
         ) 
       }
+
+      <Footer />
 
     </div>
   );
