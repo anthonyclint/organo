@@ -5,7 +5,7 @@ import FormField from '../form-field';
 import DropdownList from '../dropdown-list';
 import Button from '../button';
 
-const Form = () => {
+const Form = (props) => {
 
     const teams = [
         'Programação',
@@ -24,7 +24,12 @@ const Form = () => {
 
     const saving = (event) => {
         event.preventDefault();
-        console.log('Formulário submetido => ', name, job, image, team);
+        props.registeredCollaborator({
+            name: name,
+            job: job,
+            image: image,
+            team: team
+        });
     }
 
     return (
