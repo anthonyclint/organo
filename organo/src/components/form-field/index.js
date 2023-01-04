@@ -4,7 +4,7 @@ const FormField = (props) => {
     return (
         <div className="form-field">
             <label>{props.label}</label>
-            <input placeholder={props.placeholder}></input>
+            <input required={props.mandatory} placeholder={props.placeholder}></input>
         </div>
     );
 }
